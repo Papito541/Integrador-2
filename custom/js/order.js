@@ -186,7 +186,7 @@ $(document).ready(function() {
 		$('#topNavManageOrder').addClass('active');
 
 		manageOrderTable = $("#manageOrderTable").DataTable({
-			'ajax': 'php_action/fetchOrder.php',
+			'ajax': '../php_action/CONTROLADOR/fetchOrder.php',
 			'order': []
 		});		
 					
@@ -356,7 +356,7 @@ function printOrder(orderId = null) {
 	if(orderId) {		
 			
 		$.ajax({
-			url: 'php_action/printOrder.php',
+			url: '../php_action/DAO/printOrder.php',
 			type: 'post',
 			data: {orderId: orderId},
 			dataType: 'text',
@@ -406,7 +406,7 @@ function addRow() {
 	}
 
 	$.ajax({
-		url: 'php_action/fetchProductData.php',
+		url: '../php_action/CONTROLADOR/fetchProductData.php',
 		type: 'post',
 		dataType: 'json',
 		success:function(response) {
@@ -499,7 +499,7 @@ function getProductData(row = null) {
 
 		} else {
 			$.ajax({
-				url: 'php_action/fetchSelectedProduct.php',
+				url: '../php_action/CONTROLADOR/fetchSelectedProduct.php',
 				type: 'post',
 				data: {productId : productId},
 				dataType: 'json',
@@ -671,7 +671,7 @@ function removeOrder(orderId = null) {
 			$("#removeOrderBtn").button('loading');
 
 			$.ajax({
-				url: 'php_action/removeOrder.php',
+				url: '../php_action/DAO/removeOrder.php',
 				type: 'post',
 				data: {orderId : orderId},
 				dataType: 'json',
@@ -730,7 +730,7 @@ function paymentOrder(orderId = null) {
 		$("#orderDate").datepicker();
 
 		$.ajax({
-			url: 'php_action/fetchOrderData.php',
+			url: '../php_action/CONTROLADOR/fetchOrderData.php',
 			type: 'post',
 			data: {orderId: orderId},
 			dataType: 'json',
@@ -776,7 +776,7 @@ function paymentOrder(orderId = null) {
 					if(payAmount && paymentType && paymentStatus) {
 						$("#updatePaymentOrderBtn").button('loading');
 						$.ajax({
-							url: 'php_action/editPayment.php',
+							url: '../php_action/DAO/editPayment.php',
 							type: 'post',
 							data: {
 								orderId: orderId,

@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$('#navProduct').addClass('active');
 	// manage product data table
 	manageProductTable = $('#manageProductTable').DataTable({
-		'ajax': 'php_action/fetchProduct.php',
+		'ajax': '../php_action/CONTROLADOR/fetchProduct.php',
 		'order': []
 	});
 
@@ -194,7 +194,7 @@ function editProduct(productId = null) {
 		$('.div-result').addClass('div-hide');
 
 		$.ajax({
-			url: 'php_action/fetchSelectedProduct.php',
+			url: '../php_action/CONTROLADOR/fetchSelectedProduct.php',
 			type: 'post',
 			data: {productId: productId},
 			dataType: 'json',
@@ -427,7 +427,7 @@ function editProduct(productId = null) {
 									$(".fileinput-remove-button").click();
 
 									$.ajax({
-										url: 'php_action/fetchProductImageUrl.php?i='+productId,
+										url: '../php_action/CONTROLADOR/fetchProductImageUrl.php?i='+productId,
 										type: 'post',
 										success:function(response) {
 										$("#getProductImage").attr('src', response);		
@@ -465,7 +465,7 @@ function removeProduct(productId = null) {
 			// loading remove button
 			$("#removeProductBtn").button('loading');
 			$.ajax({
-				url: 'php_action/removeProduct.php',
+				url: '../php_action/DAO/removeProduct.php',
 				type: 'post',
 				data: {productId: productId},
 				dataType: 'json',

@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$('#topNavUser').addClass('active');
 	// manage product data table
 	manageUserTable = $('#manageUserTable').DataTable({
-		'ajax': 'php_action/fetchUser.php',
+		'ajax': '../php_action/CONTROLADOR/fetchUser.php',
 		'order': []
 	});
 
@@ -143,7 +143,7 @@ function editUser(userid = null) {
 		$('.div-result').addClass('div-hide');
 
 		$.ajax({
-			url: 'php_action/fetchSelectedUser.php',
+			url: '../php_action/CONTROLADOR/fetchSelectedUser.php',
 			type: 'post',
 			data: {"userid": userid},
 			dataType: 'json',
@@ -311,7 +311,7 @@ function editUser(userid = null) {
 									$(".fileinput-remove-button").click();
 
 									$.ajax({
-										url: 'php_action/fetchProductImageUrl.php?i='+userid,
+										url: '../php_action/CONTROLADOR/fetchProductImageUrl.php?i='+userid,
 										type: 'post',
 										success:function(response) {
 										$("#getProductImage").attr('src', response);		
@@ -349,7 +349,7 @@ function removeUser(userid = null) {
 			// loading remove button
 			$("#removeProductBtn").button('loading');
 			$.ajax({
-				url: 'php_action/removeUser.php',
+				url: '../php_action/DAO/removeUser.php',
 				type: 'post',
 				data: {userid: userid},
 				dataType: 'json',

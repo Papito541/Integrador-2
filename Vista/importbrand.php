@@ -9,7 +9,7 @@
 			<!-- /panel-heading -->
 			<div class="panel-body">
 				
-				<form class="form-horizontal" id="submitImportForm" action="php_action/createBrandImport.php" method="POST" enctype="multipart/form-data">
+				<form class="form-horizontal" id="submitImportForm" action="../php_action/DAO/createBrandImport.php" method="POST" enctype="multipart/form-data">
 				<div id="add-product-messages"></div>
 				<div class="form-group">
 	        	<label for="brandfile" class="col-sm-3 control-label">Import Brand FIle: </label>

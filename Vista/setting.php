@@ -25,7 +25,7 @@ $connect->close();
 
 				
 
-				<form action="php_action/changeUsername.php" method="post" class="form-horizontal" id="changeUsernameForm">
+				<form action="../php_action/DAO/changeUsername.php" method="post" class="form-horizontal" id="changeUsernameForm">
 					<fieldset>
 						<legend>Change Username</legend>
 
@@ -47,7 +47,7 @@ $connect->close();
 					</fieldset>
 				</form>
 
-				<form action="php_action/changePassword.php" method="post" class="form-horizontal" id="changePasswordForm">
+				<form action="../php_action/DAO/changePassword.php" method="post" class="form-horizontal" id="changePasswordForm">
 					<fieldset>
 						<legend>Change Password</legend>
 

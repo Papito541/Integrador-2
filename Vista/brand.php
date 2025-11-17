@@ -41,7 +41,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
     	
-    	<form class="form-horizontal" id="submitBrandForm" action="php_action/createBrand.php" method="POST">
+    	<form class="form-horizontal" id="submitBrandForm" action="../php_action/DAO/createBrand.php" method="POST">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><i class="fa fa-plus"></i> Agregar marca</h4>
@@ -91,7 +91,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
     	
-    	<form class="form-horizontal" id="editBrandForm" action="php_action/editBrand.php" method="POST">
+    	<form class="form-horizontal" id="editBrandForm" action="../php_action/DAO/editBrand.php" method="POST">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><i class="fa fa-edit"></i> Editar marca</h4>

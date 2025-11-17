@@ -1,7 +1,7 @@
 <?php 	
 //ALTER TABLE `orders` ADD `payment_place` INT NOT NULL AFTER `payment_status`;
 //TER TABLE `orders` ADD `gstn` VARCHAR(255) NOT NULL AFTER `payment_place`;
-require_once 'core.php';
+require_once(__DIR__ . '/../../Vista/core.php');
 
 $valid['success'] = array('success' => false, 'messages' => array(), 'order_id' => '');
 // print_r($valid);

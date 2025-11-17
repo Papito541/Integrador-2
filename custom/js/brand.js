@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 	// manage brand table
 	manageBrandTable = $("#manageBrandTable").DataTable({
-		'ajax': 'php_action/fetchBrand.php',
+		'ajax': '../php_action/CONTROLADOR/fetchBrand.php',
 		'order': []
 	});
 
@@ -105,7 +105,7 @@ function editBrands(brandId = null) {
 		$('.editBrandFooter').addClass('div-hide');
 
 		$.ajax({
-			url: 'php_action/fetchSelectedBrand.php',
+			url: '../php_action/CONTROLADOR/fetchSelectedBrand.php',
 			type: 'post',
 			data: { brandId: brandId },
 			dataType: 'json',
@@ -212,7 +212,7 @@ function removeBrands(brandId = null) {
 	if (brandId) {
 		$('#removeBrandId').remove();
 		$.ajax({
-			url: 'php_action/fetchSelectedBrand.php',
+			url: '../php_action/CONTROLADOR/fetchSelectedBrand.php',
 			type: 'post',
 			data: { brandId: brandId },
 			dataType: 'json',
@@ -225,7 +225,7 @@ function removeBrands(brandId = null) {
 					$("#removeBrandBtn").button('loading');
 
 					$.ajax({
-						url: 'php_action/removeBrand.php',
+						url: '../php_action/DAO/removeBrand.php',
 						type: 'post',
 						data: { brandId: brandId },
 						dataType: 'json',

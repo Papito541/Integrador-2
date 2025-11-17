@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/../php_action/core.php'; ?>
+<?php require_once __DIR__ . '/../Vista/core.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -21,6 +21,27 @@
   <script src="../assests/bootstrap/js/bootstrap.min.js"></script>
 
 </head>
+<div id="chat-widget">
+  <div id="chat-header" onclick="toggleChat()">
+    <span id="chat-title">Chat</span>
+    <span id="chat-toggle-badge">💬</span>
+  </div>
+
+  <div id="chat-body">
+    <div style="display:flex; border-bottom:1px solid #eee; padding:8px;">
+      <select id="select-contact" style="flex:1; padding:6px;">
+        <option value="">— Selecciona contacto —</option>
+      </select>
+    </div>
+
+    <div id="chat-messages"></div>
+
+    <div id="chat-input">
+      <input type="text" id="chat-text" placeholder="Escribe un mensaje...">
+      <button id="btnEnviar">➤</button>
+    </div>
+  </div>
+</div>
 <body>
 
 

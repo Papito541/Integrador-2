@@ -43,7 +43,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-    	<form class="form-horizontal" id="submitCategoriesForm" action="php_action/createCategories.php" method="POST">
+    	<form class="form-horizontal" id="submitCategoriesForm" action="../php_action/DAO/createCategories.php" method="POST">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><i class="fa fa-plus"></i> Add Categories</h4>
@@ -89,7 +89,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
     	
-    	<form class="form-horizontal" id="editCategoriesForm" action="php_action/editCategories.php" method="POST">
+    	<form class="form-horizontal" id="editCategoriesForm" action="../php_action/DAO/editCategories.php" method="POST">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><i class="fa fa-edit"></i> Edit Brand</h4>

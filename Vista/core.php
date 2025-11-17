@@ -1,9 +1,12 @@
 <?php 
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
-require_once 'db_connect.php';
+require_once __DIR__ . '/../php_action/db_connect.php';
 
+$connect = Conexion::getInstancia();
 // echo $_SESSION['userId'];
 
 if(!$_SESSION['userId']) {

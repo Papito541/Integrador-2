@@ -1,6 +1,6 @@
 <?php 	
 
-require_once 'core.php';
+require_once __DIR__ . '/../../Vista/core.php';
 
 $sql = "SELECT order_id, order_date, client_name, client_contact, payment_status FROM orders WHERE order_status = 1";
 $result = $connect->query($sql);

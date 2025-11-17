@@ -1,6 +1,7 @@
 <?php 	
 
-require_once 'core.php';
+require_once(__DIR__ . '/../../Vista/core.php');
+
 
 $sql = "SELECT brand_id, brand_name, brand_active, brand_status FROM brands WHERE brand_status = 1";
 $result = $connect->query($sql);
@@ -23,16 +24,15 @@ if($result->num_rows > 0) {
  		$activeBrands = "<label class='label label-danger'>No Disponible</label>";
  	}
 
- 	$button = '<!-- Single button -->
-	<div class="btn-group">
-	  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	    Acción <span class="caret"></span>
-	  </button>
-	  <ul class="dropdown-menu">
-	    <li><a type="button" data-toggle="modal" data-target="#editBrandModel" onclick="editBrands('.$brandId.')"> <i class="glyphicon glyphicon-edit"></i> Editar</a></li>
-	    <li><a type="button" data-toggle="modal" data-target="#removeMemberModal" onclick="removeBrands('.$brandId.')"> <i class="glyphicon glyphicon-trash"></i> Eliminar</a></li>       
-	  </ul>
-	</div>';
+ 	$button = '<div class="btn-group">
+<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+Acción <span class="caret"></span></button>
+<ul class="dropdown-menu">
+<li><a href="#" data-toggle="modal" data-target="#editBrandModel" onclick="editBrands('.$brandId.')">
+<i class="glyphicon glyphicon-edit"></i> Editar</a></li>
+<li><a href="#" data-toggle="modal" data-target="#removeMemberModal" onclick="removeBrands('.$brandId.')">
+<i class="glyphicon glyphicon-trash"></i> Eliminar</a></li>
+</ul></div>';
 
  	$output['data'][] = array( 		
  		$row[1], 		

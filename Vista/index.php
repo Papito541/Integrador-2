@@ -3,8 +3,11 @@ require_once '../php_action/db_connect.php';
 
 session_start();
 
+$connect = Conexion::getInstancia();
+
 if(isset($_SESSION['userId'])) {
-	header('location:'.$store_url.'dashboard.php');		
+	header('location:'.$store_url.'dashboard.php');
+	exit();		
 }
 
 $errors = array();
@@ -23,23 +26,27 @@ if($_POST) {
 			$errors[] = "Password is required";
 		}
 	} else {
+
+		$username = $connect->real_escape_string($username);
+		
 		$sql = "SELECT * FROM users WHERE username = '$username'";
 		$result = $connect->query($sql);
 
 		if($result->num_rows == 1) {
+
 			$password = md5($password);
 			// exists
 			$mainSql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 			$mainResult = $connect->query($mainSql);
 
 			if($mainResult->num_rows == 1) {
-				$value = $mainResult->fetch_assoc();
-				$user_id = $value['user_id'];
 
-				// set session
-				$_SESSION['userId'] = $user_id;
+                $value = $mainResult->fetch_assoc();
+                $_SESSION['userId'] = $value['user_id'];
 
-				header('location:'.$store_url.'dashboard.php');	
+                header('location:'.$store_url.'dashboard.php');
+                exit();
+
 			} else{
 				
 				$errors[] = "Incorrect username/password combination";

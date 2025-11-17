@@ -42,7 +42,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
 
-    	<form class="form-horizontal" id="submitUserForm" action="php_action/createUser.php" method="POST" enctype="multipart/form-data">
+    	<form class="form-horizontal" id="submitUserForm" action="../php_action/DAO/createUser.php" method="POST" enctype="multipart/form-data">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title"><i class="fa fa-plus"></i> Add User</h4>
@@ -122,7 +122,7 @@
 				    
 				    <!-- product image -->
 				    <div role="tabpanel" class="tab-pane active" id="userInfo">
-				    	<form class="form-horizontal" id="editUserForm" action="php_action/editUser.php" method="POST">				    
+				    	<form class="form-horizontal" id="editUserForm" action="../php_action/DAO/editUser.php" method="POST">				    
 				    	<br />
 
 				    	<div id="edit-user-messages"></div>

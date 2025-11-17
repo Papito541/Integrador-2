@@ -2,7 +2,7 @@
 
 
 
-require_once 'core.php';
+require_once __DIR__ . '/../../Vista/core.php';
 
 $sql = "SELECT product.product_id, product.product_name, product.product_image, product.brand_id,
  		product.categories_id, product.quantity, product.rate, product.active, product.status, 

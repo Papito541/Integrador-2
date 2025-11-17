@@ -1,6 +1,6 @@
 <?php 	
 
-require_once 'core.php';
+require_once __DIR__ . '/../../Vista/core.php';
 
 $categoriesId = $_POST['categoriesId'];
 

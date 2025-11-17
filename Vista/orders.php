@@ -1,5 +1,5 @@
 <?php 
-require_once '../php_action/db_connect.php'; 
+require_once '../php_action/db_connect.php';
 require_once '../includes/header.php'; 
 
 if($_GET['o'] == 'add') { 
@@ -61,7 +61,7 @@ if($_GET['o'] == 'add') {
 
 			<div class="success-messages"></div> <!--/success-messages-->
 
-  		<form class="form-horizontal" method="POST" action="php_action/createOrder.php" id="createOrderForm">
+  		<form class="form-horizontal" method="POST" action="../php_action/DAO/createOrder.php" id="createOrderForm">
 
 			  <div class="form-group">
 			    <label for="orderDate" class="col-sm-2 control-label">Order Date</label>
@@ -270,7 +270,7 @@ if($_GET['o'] == 'add') {
 			
 			<div class="success-messages"></div> <!--/success-messages-->
 
-  		<form class="form-horizontal" method="POST" action="php_action/editOrder.php" id="editOrderForm">
+  		<form class="form-horizontal" method="POST" action="../php_action/DAO/editOrder.php" id="editOrderForm">
 
   			<?php $orderId = $_GET['i'];
 
